@@ -1,0 +1,9 @@
+{
+	"name": "adf-gruporevise",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e613f2e9-cf76-4be5-9925-57e11a2cb4db",
+		"tenantId": "ac4fe262-e63a-4a42-ba73-d546e8665d2c"
+	}
+}
