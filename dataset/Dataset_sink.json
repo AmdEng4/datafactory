@@ -1,0 +1,12 @@
+{
+	"name": "Dataset_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_cloud",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
