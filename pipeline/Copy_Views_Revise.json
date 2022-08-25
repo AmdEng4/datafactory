@@ -1,6 +1,7 @@
 {
-	"name": "pipeline1",
+	"name": "Copy_Views_Revise",
 	"properties": {
+		"description": "Copia as tabelas views do grupo Revise.",
 		"activities": [
 			{
 				"name": "Copy sankhya_ AD_PWBCAB",
