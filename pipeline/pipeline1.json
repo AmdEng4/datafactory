@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy sankhya_AD_PWBCAB",
+				"name": "Copy sankhya_ AD_PWBCAB",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -435,7 +435,8 @@
 				]
 			},
 			{
-				"name": "Copy data2",
+				"name": "Copy sankhya_ AD_PWBITE",
+				"description": "",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
