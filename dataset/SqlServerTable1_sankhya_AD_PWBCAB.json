@@ -1,5 +1,5 @@
 {
-	"name": "SqlServerTable1",
+	"name": "SqlServerTable1_sankhya_AD_PWBCAB",
 	"properties": {
 		"description": "sankhya.AD_PWBCAB",
 		"linkedServiceName": {

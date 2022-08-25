@@ -423,13 +423,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SqlServerTable1",
+						"referenceName": "SqlServerTable1_sankhya_AD_PWBCAB",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "SqlServerTable1",
+						"referenceName": "SqlServerTable1_sankhya_AD_PWBCAB",
 						"type": "DatasetReference"
 					}
 				]
