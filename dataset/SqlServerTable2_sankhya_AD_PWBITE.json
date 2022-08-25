@@ -1,0 +1,116 @@
+{
+	"name": "SqlServerTable2_sankhya_AD_PWBITE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_source",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "BASESUBSTIT",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "BASESUBSTSEMRED",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "CODPROD",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "COMISRET",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "NUNOTA",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PERCCOM",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PERCDESC",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PERCDESCBASE",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PRECOBASE",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "QTDENTREGUE",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "QTDNEG",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "REFERENCIA",
+				"type": "varchar"
+			},
+			{
+				"name": "VLRCOM",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VLRRETORNO",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VLRRETORNOCLI",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VLRSUBST",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VLRTOT",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VLRUNIT",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VLRUNITRET",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VLRVENLIQRET",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "sankhya",
+			"table": "AD_PWBITE"
+		}
+	}
+}
