@@ -706,10 +706,7 @@
 						"writeBehavior": "insert",
 						"sqlWriterUseTableLock": false
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator"
-					}
+					"enableStaging": false
 				},
 				"inputs": [
 					{
@@ -719,7 +716,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "SINK",
+						"referenceName": "SINK_dtproperties",
 						"type": "DatasetReference"
 					}
 				]
