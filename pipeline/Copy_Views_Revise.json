@@ -731,14 +731,7 @@
 			{
 				"name": "Copy sankhya_ AD_PWBCON",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "Copy sankhya_ AD_PWBITE",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -785,14 +778,7 @@
 			{
 				"name": "Copy sankhya_ AD_PWBDIMCUS",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "Copy sankhya_ AD_PWBCON",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,

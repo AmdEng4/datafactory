@@ -2,7 +2,7 @@
 	"name": "SINK_AD_PWBCON",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "DB_ODS",
+			"referenceName": "LS_SINK_AD_PWBCON",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
