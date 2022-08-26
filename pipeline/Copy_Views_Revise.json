@@ -24,7 +24,9 @@
 					"sink": {
 						"type": "AzureSqlSink",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -455,9 +457,11 @@
 						"partitionOption": "None"
 					},
 					"sink": {
-						"type": "SqlServerSink",
+						"type": "AzureSqlSink",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -719,7 +723,298 @@
 				],
 				"outputs": [
 					{
+						"referenceName": "AD_PWBITE",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Copy sankhya_ AD_PWBITE_copy1",
+				"description": "",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "BASESUBSTIT",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "BASESUBSTIT",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "BASESUBSTSEMRED",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "BASESUBSTSEMRED",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "CODPROD",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "CODPROD",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "COMISRET",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "COMISRET",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "NUNOTA",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "NUNOTA",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "PERCCOM",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "PERCCOM",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "PERCDESC",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "PERCDESC",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "PERCDESCBASE",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "PERCDESCBASE",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "PRECOBASE",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "PRECOBASE",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "QTDENTREGUE",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "QTDENTREGUE",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "QTDNEG",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "QTDNEG",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "REFERENCIA",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "REFERENCIA",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "VLRCOM",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "VLRCOM",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "VLRRETORNO",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "VLRRETORNO",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "VLRRETORNOCLI",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "VLRRETORNOCLI",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "VLRSUBST",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "VLRSUBST",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "VLRTOT",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "VLRTOT",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "VLRUNIT",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "VLRUNIT",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "VLRUNITRET",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "VLRUNITRET",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "VLRVENLIQRET",
+									"type": "Double",
+									"physicalType": "float"
+								},
+								"sink": {
+									"name": "VLRVENLIQRET",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
 						"referenceName": "SqlServerTable2_sankhya_AD_PWBITE",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AD_PWBITE",
 						"type": "DatasetReference"
 					}
 				]
