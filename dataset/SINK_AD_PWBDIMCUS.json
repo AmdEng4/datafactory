@@ -7,6 +7,10 @@
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"schema": "DB_ODS",
+			"table": "SINK_AD_PWBDIMCUS"
+		}
 	}
 }
