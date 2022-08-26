@@ -9,108 +9,40 @@
 		"type": "SqlServerTable",
 		"schema": [
 			{
-				"name": "BASESUBSTIT",
-				"type": "float",
-				"precision": 15
-			},
-			{
-				"name": "BASESUBSTSEMRED",
-				"type": "float",
-				"precision": 15
-			},
-			{
-				"name": "CODPROD",
+				"name": "id",
 				"type": "int",
 				"precision": 10
 			},
 			{
-				"name": "COMISRET",
-				"type": "float",
-				"precision": 15
-			},
-			{
-				"name": "NUNOTA",
+				"name": "objectid",
 				"type": "int",
 				"precision": 10
 			},
 			{
-				"name": "PERCCOM",
-				"type": "float",
-				"precision": 15
-			},
-			{
-				"name": "PERCDESC",
-				"type": "float",
-				"precision": 15
-			},
-			{
-				"name": "PERCDESCBASE",
-				"type": "float",
-				"precision": 15
-			},
-			{
-				"name": "PRECOBASE",
-				"type": "float",
-				"precision": 15
-			},
-			{
-				"name": "QTDENTREGUE",
-				"type": "float",
-				"precision": 15
-			},
-			{
-				"name": "QTDNEG",
-				"type": "float",
-				"precision": 15
-			},
-			{
-				"name": "REFERENCIA",
+				"name": "property",
 				"type": "varchar"
 			},
 			{
-				"name": "VLRCOM",
-				"type": "float",
-				"precision": 15
+				"name": "value",
+				"type": "varchar"
 			},
 			{
-				"name": "VLRRETORNO",
-				"type": "float",
-				"precision": 15
+				"name": "uvalue",
+				"type": "nvarchar"
 			},
 			{
-				"name": "VLRRETORNOCLI",
-				"type": "float",
-				"precision": 15
+				"name": "lvalue",
+				"type": "image"
 			},
 			{
-				"name": "VLRSUBST",
-				"type": "float",
-				"precision": 15
-			},
-			{
-				"name": "VLRTOT",
-				"type": "float",
-				"precision": 15
-			},
-			{
-				"name": "VLRUNIT",
-				"type": "float",
-				"precision": 15
-			},
-			{
-				"name": "VLRUNITRET",
-				"type": "float",
-				"precision": 15
-			},
-			{
-				"name": "VLRVENLIQRET",
-				"type": "float",
-				"precision": 15
+				"name": "version",
+				"type": "int",
+				"precision": 10
 			}
 		],
 		"typeProperties": {
-			"schema": "sankhya",
-			"table": "AD_PWBITE"
+			"schema": "dbo",
+			"table": "dtproperties"
 		}
 	}
 }
