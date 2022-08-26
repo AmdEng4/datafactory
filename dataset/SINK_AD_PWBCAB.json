@@ -1,0 +1,175 @@
+{
+	"name": "SINK_AD_PWBCAB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DB_ODS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "NUNOTA",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CODEMP",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "CODCENCUS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NUMNOTA",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DTNEG",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DTNEGPEDIDO",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CODPARC",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RAZAOSOCIAL",
+				"type": "varchar"
+			},
+			{
+				"name": "CODGRUPO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CODTIPPARC",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "AD_DIAPADRAO",
+				"type": "varchar"
+			},
+			{
+				"name": "CODTIPVENDA",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "CODTIPOPER",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "DHTIPOPER",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CODVEND",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "COMISSAO",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VLRFRETE",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "AD_FRETECALC",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "AD_FRETENEG",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "AD_FRETEPGTRANSP",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VLRSEG",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "TIPFRETE",
+				"type": "char"
+			},
+			{
+				"name": "CIF_FOB",
+				"type": "char"
+			},
+			{
+				"name": "VLRNOTA",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "STATUSNOTA",
+				"type": "char"
+			},
+			{
+				"name": "BASESUBSTIT",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "BASESUBSTSEMRED",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "VLRSUBST",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "CODNAT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PESO",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "PESOBRUTO",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "CODCID",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "DB_ODS",
+			"table": "AD_PWBCAB"
+		}
+	}
+}
