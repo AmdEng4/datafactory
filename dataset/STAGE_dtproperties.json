@@ -1,0 +1,12 @@
+{
+	"name": "STAGE_dtproperties",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DB_ODS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}

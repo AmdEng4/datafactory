@@ -17,7 +17,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "SqlServerSource",
+						"type": "AzureSqlSource",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -426,7 +426,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SqlServerTable1_sankhya_AD_PWBCAB",
+						"referenceName": "STAGE_PWBCAB",
 						"type": "DatasetReference"
 					}
 				],
@@ -452,16 +452,9 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "SqlServerSource",
+						"type": "AzureSqlSource",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
-					},
-					"sink": {
-						"type": "AzureSqlSink",
-						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false,
-						"tableOption": "autoCreate",
-						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -470,266 +463,215 @@
 							{
 								"source": {
 									"name": "BASESUBSTIT",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "BASESUBSTIT",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "BASESUBSTSEMRED",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "BASESUBSTSEMRED",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "CODPROD",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "Int32"
 								},
 								"sink": {
 									"name": "CODPROD",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "Int32"
 								}
 							},
 							{
 								"source": {
 									"name": "COMISRET",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "COMISRET",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "NUNOTA",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "Int32"
 								},
 								"sink": {
 									"name": "NUNOTA",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "Int32"
 								}
 							},
 							{
 								"source": {
 									"name": "PERCCOM",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "PERCCOM",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "PERCDESC",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "PERCDESC",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "PERCDESCBASE",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "PERCDESCBASE",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "PRECOBASE",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "PRECOBASE",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "QTDENTREGUE",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "QTDENTREGUE",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "QTDNEG",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "QTDNEG",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "REFERENCIA",
-									"type": "String",
-									"physicalType": "varchar"
+									"type": "String"
 								},
 								"sink": {
 									"name": "REFERENCIA",
-									"type": "String",
-									"physicalType": "varchar"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "VLRCOM",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "VLRCOM",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "VLRRETORNO",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "VLRRETORNO",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "VLRRETORNOCLI",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "VLRRETORNOCLI",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "VLRSUBST",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "VLRSUBST",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "VLRTOT",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "VLRTOT",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "VLRUNIT",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "VLRUNIT",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "VLRUNITRET",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "VLRUNITRET",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "VLRVENLIQRET",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "VLRVENLIQRET",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							}
-						],
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
+						]
 					}
 				},
 				"inputs": [
 					{
-						"referenceName": "SqlServerTable2_sankhya_AD_PWBITE",
-						"type": "DatasetReference"
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "AD_PWBITE",
+						"referenceName": "STAGE_AD_PWBITE",
 						"type": "DatasetReference"
 					}
 				]
 			},
 			{
-				"name": "Copy sankhya_ AD_PWBITE_copy1",
+				"name": "Copy sankhya_ dtproperties",
 				"description": "",
 				"type": "Copy",
 				"dependsOn": [],
@@ -743,16 +685,9 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "SqlServerSource",
+						"type": "AzureSqlSource",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
-					},
-					"sink": {
-						"type": "AzureSqlSink",
-						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false,
-						"tableOption": "autoCreate",
-						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -761,260 +696,209 @@
 							{
 								"source": {
 									"name": "BASESUBSTIT",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "BASESUBSTIT",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "BASESUBSTSEMRED",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "BASESUBSTSEMRED",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "CODPROD",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "Int32"
 								},
 								"sink": {
 									"name": "CODPROD",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "Int32"
 								}
 							},
 							{
 								"source": {
 									"name": "COMISRET",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "COMISRET",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "NUNOTA",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "Int32"
 								},
 								"sink": {
 									"name": "NUNOTA",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "Int32"
 								}
 							},
 							{
 								"source": {
 									"name": "PERCCOM",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "PERCCOM",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "PERCDESC",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "PERCDESC",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "PERCDESCBASE",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "PERCDESCBASE",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "PRECOBASE",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "PRECOBASE",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "QTDENTREGUE",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "QTDENTREGUE",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "QTDNEG",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "QTDNEG",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "REFERENCIA",
-									"type": "String",
-									"physicalType": "varchar"
+									"type": "String"
 								},
 								"sink": {
 									"name": "REFERENCIA",
-									"type": "String",
-									"physicalType": "varchar"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "VLRCOM",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "VLRCOM",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "VLRRETORNO",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "VLRRETORNO",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "VLRRETORNOCLI",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "VLRRETORNOCLI",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "VLRSUBST",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "VLRSUBST",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "VLRTOT",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "VLRTOT",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "VLRUNIT",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "VLRUNIT",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "VLRUNITRET",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "VLRUNITRET",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							},
 							{
 								"source": {
 									"name": "VLRVENLIQRET",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								},
 								"sink": {
 									"name": "VLRVENLIQRET",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "Double"
 								}
 							}
-						],
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
+						]
 					}
 				},
 				"inputs": [
 					{
-						"referenceName": "SqlServerTable2_sankhya_AD_PWBITE",
-						"type": "DatasetReference"
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "AD_PWBITE",
+						"referenceName": "STAGE_dtproperties",
 						"type": "DatasetReference"
 					}
 				]
