@@ -1,0 +1,16 @@
+{
+	"name": "AD_PWBITE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DB_ODS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "STAGE",
+			"table": "AD_PWBITE"
+		}
+	}
+}
