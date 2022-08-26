@@ -22,7 +22,7 @@
 						"partitionOption": "None"
 					},
 					"sink": {
-						"type": "SqlServerSink",
+						"type": "AzureSqlSink",
 						"writeBehavior": "insert",
 						"sqlWriterUseTableLock": false
 					},
@@ -430,7 +430,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "SqlServerTable1_sankhya_AD_PWBCAB",
+						"referenceName": "STAGE_PWBCAB",
 						"type": "DatasetReference"
 					}
 				]
