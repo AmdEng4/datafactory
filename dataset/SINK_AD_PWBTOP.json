@@ -1,0 +1,12 @@
+{
+	"name": "SINK_AD_PWBTOP",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DB_ODS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
