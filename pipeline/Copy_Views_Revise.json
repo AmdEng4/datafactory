@@ -440,7 +440,14 @@
 				"name": "Copy sankhya_ AD_PWBITE",
 				"description": "",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy sankhya_ AD_PWBCAB",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -685,7 +692,14 @@
 				"name": "Copy sankhya_ dtproperties",
 				"description": "",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy sankhya_ AD_PWBITE",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -724,7 +738,14 @@
 			{
 				"name": "Copy sankhya_ AD_PWBCON",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy sankhya_ dtproperties",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -771,7 +792,14 @@
 			{
 				"name": "Copy sankhya_ AD_PWBDIMCUS",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy sankhya_ AD_PWBCON",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -819,7 +847,14 @@
 				"name": "Copy sankhya_ AD_PWBDIMEMP",
 				"description": "",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy sankhya_ AD_PWBDIMCUS",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -867,7 +902,14 @@
 				"name": "Copy sankhya_ AD_PWBDIMGEC",
 				"description": "",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy sankhya_ AD_PWBDIMEMP",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -915,7 +957,14 @@
 				"name": "Copy sankhya_ AD_PWBDIMNAT",
 				"description": "",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy sankhya_ AD_PWBDIMGEC",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -963,7 +1012,14 @@
 				"name": "Copy sankhya_ AD_PWBDIMPAR",
 				"description": "",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy sankhya_ AD_PWBDIMNAT",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -1011,7 +1067,14 @@
 				"name": "Copy sankhya_ AD_PWBDIMPRO",
 				"description": "",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy sankhya_ AD_PWBDIMPAR",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -1059,7 +1122,14 @@
 				"name": "Copy sankhya_ AD_PWBDIMTOP",
 				"description": "",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy sankhya_ AD_PWBDIMPRO",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -1107,7 +1177,14 @@
 				"name": "Copy sankhya_ AD_PWBDIMTPP",
 				"description": "",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy sankhya_ AD_PWBDIMTOP",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -1155,7 +1232,14 @@
 				"name": "Copy sankhya_ AD_PWBDIMVEN",
 				"description": "",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy sankhya_ AD_PWBDIMTPP",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -1203,7 +1287,14 @@
 				"name": "Copy sankhya_ AD_PWBTOP",
 				"description": "",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy sankhya_ AD_PWBDIMVEN",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
