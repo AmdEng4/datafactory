@@ -2,7 +2,7 @@
 	"name": "SinkDataset",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_cloud",
+			"referenceName": "ls_db_ods",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
