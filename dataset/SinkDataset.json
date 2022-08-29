@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"SinkTableName": {
+			"tableName": {
 				"type": "string"
 			}
 		},
@@ -14,8 +14,9 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
+			"schema": "BD_STAGE",
 			"table": {
-				"value": "@dataset().SinkTableName",
+				"value": "@dataset().tableName",
 				"type": "Expression"
 			}
 		}
