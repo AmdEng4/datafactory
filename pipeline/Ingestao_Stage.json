@@ -22,7 +22,7 @@
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "Dataset_SCR",
+						"referenceName": "SourceDataset",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
