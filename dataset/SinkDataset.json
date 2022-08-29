@@ -14,7 +14,7 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "BD_STAGE",
+			"schema": "BD_ODS",
 			"table": {
 				"value": "@dataset().tableName",
 				"type": "Expression"
