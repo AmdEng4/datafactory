@@ -36,7 +36,7 @@
 								"source": {
 									"type": "AzureSqlSource",
 									"sqlReaderQuery": {
-										"value": "select * from watermarktable where TableName  =  '@{item().TABLE_NAME}'",
+										"value": "select * from watermarktable where TableName  =  '@{item().TableName}'",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
@@ -64,7 +64,7 @@
 								"source": {
 									"type": "SqlServerSource",
 									"sqlReaderQuery": {
-										"value": "select MAX(@{item().WatermarkValue}) as NewWatermarkvalue from @{item().TABLE_NAME}",
+										"value": "select MAX(@{item().WatermarkValue}) as NewWatermarkvalue from @{item().TableName}",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
