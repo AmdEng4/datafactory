@@ -696,14 +696,7 @@
 				"name": "Copy sankhya_ dtproperties",
 				"description": "",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "Copy sankhya_ AD_PWBTOP",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -1362,6 +1355,118 @@
 				"outputs": [
 					{
 						"referenceName": "SINK_AD_PWBCON",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Copy sankhya_ AD_PWBDIMTPV",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Copy sankhya_ dtproperties",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"sqlReaderQuery": "select * from sankhya.AD_PWBDIMTPV",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SOURCE",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SINK_AD_PWBDIMTPV",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Copy sankhya_ AD_PWBDIMCID",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Copy sankhya_ AD_PWBDIMTPV",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"sqlReaderQuery": "select * from sankhya.AD_PWBDIMCID",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SOURCE",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SINK_AD_PWBDIMCID",
 						"type": "DatasetReference"
 					}
 				]
