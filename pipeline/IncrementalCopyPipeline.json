@@ -5,11 +5,18 @@
 			{
 				"name": "IterateSQLTables",
 				"type": "ForEach",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "tableList",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@pipeline().parameters.tableList",
+						"value": "@activity('tableList').output.value",
 						"type": "Expression"
 					},
 					"activities": [
@@ -57,7 +64,7 @@
 								"source": {
 									"type": "SqlServerSource",
 									"sqlReaderQuery": {
-										"value": "select MAX(@{item().WaterMark_Column}) as NewWatermarkvalue from @{item().TABLE_NAME}",
+										"value": "select MAX(@{item().WatermarkValue}) as NewWatermarkvalue from @{item().TABLE_NAME}",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
@@ -195,13 +202,37 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "tableList",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "select distinct\n\tlower(table_name) as 'TableName',\n\tgetdate() as 'WatermarkValue'\nfrom information_schema.tables\n\twhere table_schema = 'db_ods'",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "SinkDataset",
+						"type": "DatasetReference",
+						"parameters": {
+							"SinkTableName": "tables"
+						}
+					},
+					"firstRowOnly": false
+				}
 			}
 		],
-		"parameters": {
-			"tableList": {
-				"type": "array"
-			}
-		},
 		"annotations": []
 	}
 }
