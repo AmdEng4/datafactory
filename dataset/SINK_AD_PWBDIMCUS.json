@@ -10,7 +10,7 @@
 		"schema": [],
 		"typeProperties": {
 			"schema": "DB_ODS",
-			"table": "SINK_AD_PWBDIMCUS"
+			"table": "AD_PWBDIMCUS"
 		}
 	}
 }
