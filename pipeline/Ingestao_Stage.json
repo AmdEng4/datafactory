@@ -15,16 +15,6 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"source": {
-						"type": "SqlServerSource",
-						"sqlReaderQuery": "select * from information_schema.views where table_schema = 'sankhya'",
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
-					},
-					"dataset": {
-						"referenceName": "SourceDataset",
-						"type": "DatasetReference"
-					},
 					"firstRowOnly": false
 				}
 			},
@@ -96,7 +86,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "SinkDataset",
+									"referenceName": "SinkDatasetODS",
 									"type": "DatasetReference",
 									"parameters": {
 										"tableName": {
