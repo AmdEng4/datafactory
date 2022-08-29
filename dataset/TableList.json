@@ -8,10 +8,6 @@
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": [],
-		"typeProperties": {
-			"schema": "DB_ODS",
-			"table": "AD_PWBCAB"
-		}
+		"schema": []
 	}
 }
