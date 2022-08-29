@@ -1,5 +1,5 @@
 {
-	"name": "IncrementalCopyPipeline",
+	"name": "Ingestao_Stage",
 	"properties": {
 		"activities": [
 			{
