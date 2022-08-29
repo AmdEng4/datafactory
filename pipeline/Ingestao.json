@@ -46,7 +46,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "Dataset_sink",
+						"referenceName": "TableList",
 						"type": "DatasetReference"
 					}
 				]
