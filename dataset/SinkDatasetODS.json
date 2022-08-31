@@ -14,7 +14,7 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "BD_ODS",
+			"schema": "DB_ODS",
 			"table": {
 				"value": "@dataset().tableName",
 				"type": "Expression"
