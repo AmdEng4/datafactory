@@ -110,6 +110,59 @@
 									}
 								}
 							]
+						},
+						{
+							"name": "stpETL_Upsert",
+							"type": "SqlServerStoredProcedure",
+							"dependsOn": [
+								{
+									"activity": "Copy Table",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"storedProcedureName": "[dbo].[stpETL_Upsert]",
+								"storedProcedureParameters": {
+									"Cd_Chave": {
+										"value": "",
+										"type": "String"
+									},
+									"Cd_Join": {
+										"value": "",
+										"type": "String"
+									},
+									"Fl_Debug": {
+										"value": "",
+										"type": "Boolean"
+									},
+									"Fl_Update": {
+										"value": "",
+										"type": "Boolean"
+									},
+									"Nm_Source": {
+										"value": "",
+										"type": "String"
+									},
+									"Nm_Target": {
+										"value": "",
+										"type": "String"
+									}
+								}
+							},
+							"linkedServiceName": {
+								"referenceName": "ls_db_ods",
+								"type": "LinkedServiceReference"
+							}
 						}
 					]
 				}
