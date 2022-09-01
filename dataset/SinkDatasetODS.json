@@ -14,7 +14,7 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "STAGE",
+			"schema": "ods",
 			"table": {
 				"value": "@dataset().tableName",
 				"type": "Expression"
