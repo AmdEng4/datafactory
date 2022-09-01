@@ -67,7 +67,7 @@
 								"sink": {
 									"type": "AzureSqlSink",
 									"preCopyScript": {
-										"value": "IF  OBJECT_ID('[BD_ODS].[@{item().TABLE_NAME}]') IS NOT NULL TRUNCATE TABLE [BD_ODS].[@{item().TABLE_NAME}]",
+										"value": "IF  OBJECT_ID('[ODS].[@{item().TABLE_NAME}]') IS NOT NULL TRUNCATE TABLE [ODS].[@{item().TABLE_NAME}]",
 										"type": "Expression"
 									},
 									"writeBehavior": "insert",
